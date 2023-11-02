@@ -1,9 +1,9 @@
 import {useState} from "react";
 import Button from "../common/Button";
-import line from "./../assets/img/stationImage.png";
+import catStation from "./../assets/img/catStation.jpg";
 import StationResult from "./StationResult";
 import StationTitle from "./StationTitle";
-import getRandomIndex from "./../utils/getRandomIndex";
+import getRandomIndex from "./../utils/getRandomIndex.js";
 
 function Station({stationData}) {
   const [randomStation, setRandomStation] = useState(null);
@@ -16,11 +16,11 @@ function Station({stationData}) {
   return (
     <>
       <StationTitle />
-      <img src={line} alt="1호선 노선도" />
+      <img src={catStation} alt="1호선 노선도" />
       <select name="station" id="station" className="py-8">
-        {stationData.map((station, index) => (
+        {stationData.map((station: string, index: number) => (
           <option key={index} value={station}>
-            {station}
+            {station}역
           </option>
         ))}
       </select>
