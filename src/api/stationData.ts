@@ -1,4 +1,6 @@
-export const line1Stations: string[] = [
+import {TlineStation} from "../interface/TlineStation";
+
+export const line1Stations: TlineStation = [
   "인천",
   "동인천",
   "도원",

@@ -1,7 +1,7 @@
-function StationResult() {
+function StationResult({station}) {
   return (
     <>
-      <div className="p-12">StationResult</div>
+      <div className="p-12">{station}</div>
     </>
   );
 }
