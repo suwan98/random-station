@@ -1,1 +1,4 @@
-export type TlineStation = string[];
+export interface TlineStation {
+  id: number;
+  stationName: string;
+}

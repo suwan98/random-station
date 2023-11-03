@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         GiantsInline: ["Giants-Inline"],
         GongGothicMedium: ["GongGothicMedium"],
+        prentenDard: ["Pretendard-Regular"],
       },
     },
   },
