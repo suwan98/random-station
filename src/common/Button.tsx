@@ -8,7 +8,7 @@ function Button({text, ...restProps}: IButton) {
     <>
       <button
         type="button"
-        className="font-GongGothicMedium border rounded-lg bg-slate-400 p-4 mt-12 text-white hover:bg-slate-700"
+        className="font-GongGothicMedium border rounded-lg bg-slate-400 p-4 mt-4 text-white hover:bg-slate-700"
         {...restProps}>
         {text}
       </button>
