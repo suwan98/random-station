@@ -1,9 +1,8 @@
 import {TlineStation} from "../interface/TlineStation";
 import Button from "../common/Button";
 import getRandomIndex from "../utils/getRandomIndex";
-import {useEffect, useRef, useState} from "react";
+import {useRef, useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
-import {gsap} from "gsap";
 
 interface IStationDataProps {
   stationData: TlineStation[];
