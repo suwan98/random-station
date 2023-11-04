@@ -1,8 +1,10 @@
-import {TlineStation} from "../interface/TlineStation";
+import {TlineStation} from "../@types/TlineStation";
 import Button from "../common/Button";
 import getRandomIndex from "../utils/getRandomIndex";
 import {useRef, useState} from "react";
-import {motion, AnimatePresence} from "framer-motion";
+import StationDistanceResult from "./StationDistanceResult";
+import RandomStationResult from "./RandomStationResult";
+import StationItem from "./StationItem";
 
 interface IStationDataProps {
   stationData: TlineStation[];
@@ -54,46 +56,15 @@ function AllStationList({stationData}: IStationDataProps) {
   return (
     <>
       <ul className="grid grid-cols-4  gap-4 my-8  w-fit px-6 mobile:text-sm grid-flow-dense">
-        <AnimatePresence>
-          {stationData?.map(({id, stationName}: TlineStation, index) => (
-            <motion.li
-              key={id}
-              initial={{opacity: 0, y: -50}}
-              animate={{opacity: 1, y: 0}}
-              exit={{opacity: 0, y: 50}}
-              transition={{delay: index * 0.01}}
-              onClick={handleSelectStation(id)}
-              className={`cursor-pointer rounded-md border text-center p-2 font-prentenDard hover:bg-slate-700 hover:text-slate-200 shadow-md place-content-center mobile:text-[12px] mobile:p-1  mobile:truncate ${
-                isBetweenSelectedStations(id)
-                  ? "bg-slate-700 text-slate-200"
-                  : null
-              }`}>
-              {stationName}역
-            </motion.li>
-          ))}
-        </AnimatePresence>
+        <StationItem
+          stationData={stationData}
+          handleSelectStation={handleSelectStation}
+          isBetweenSelectedStations={isBetweenSelectedStations}
+        />
       </ul>
-      <p className="font-prentenDard text-xl mobile:text-sm">
-        {filterdStaion.length > 0 ? (
-          <>
-            {filterdStaion[0]?.stationName}역에서~
-            {filterdStaion[filterdStaion.length - 1]?.stationName}역까지
-            선택하셨습니다🧐
-          </>
-        ) : (
-          "역을 선택해주세요."
-        )}
-      </p>
-      <p className="pt-4 font-GongGothicMedium text-lg text-pink-600 mobile:text-sm">
-        랜덤으로 생성된역은 ?
-      </p>
-      {!randomStation ? (
-        <p className="pt-4 font-prentenDard text-lg">어떤 역을 골라볼까?</p>
-      ) : (
-        <p className="pt-4 font-GongGothicMedium text-lg mobile:text-sm">
-          {randomStation?.stationName}역
-        </p>
-      )}
+      <StationDistanceResult filterdStaion={filterdStaion} />
+      <RandomStationResult randomStation={randomStation} />
+
       <Button
         buttonRef={buttonRef}
         text="랜덤 생성하기!"
