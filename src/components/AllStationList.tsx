@@ -2,6 +2,7 @@ import {TlineStation} from "../interface/TlineStation";
 import Button from "../common/Button";
 import getRandomIndex from "../utils/getRandomIndex";
 import {useState} from "react";
+import {motion, AnimatePresence} from "framer-motion";
 
 interface IStationDataProps {
   stationData: TlineStation[];
@@ -51,20 +52,24 @@ function AllStationList({stationData}: IStationDataProps) {
   return (
     <>
       <ul className="grid grid-cols-4  gap-4 my-8  w-fit px-6 mobile:text-sm grid-flow-dense">
-        {stationData?.map(({id, stationName}: TlineStation) => {
-          return (
-            <li
+        <AnimatePresence>
+          {stationData?.map(({id, stationName}: TlineStation, index) => (
+            <motion.li
+              key={id}
+              initial={{opacity: 0, y: -50}}
+              animate={{opacity: 1, y: 0}}
+              exit={{opacity: 0, y: 50}}
+              transition={{delay: index * 0.01}}
               onClick={handleSelectStation(id)}
               className={`cursor-pointer rounded-md border text-center p-2 font-prentenDard hover:bg-slate-700 hover:text-slate-200 shadow-md place-content-center mobile:text-[12px] mobile:p-1  mobile:truncate ${
                 isBetweenSelectedStations(id)
                   ? "bg-slate-700 text-slate-200"
                   : null
-              }`}
-              key={id}>
+              }`}>
               {stationName}역
-            </li>
-          );
-        })}
+            </motion.li>
+          ))}
+        </AnimatePresence>
       </ul>
       <p className="font-prentenDard text-xl mobile:text-sm">
         {filterdStaion.length > 0 ? (
