@@ -1,6 +1,6 @@
 interface IButton {
   text: string;
-  [key: string]: any;
+  onClick: () => void;
 }
 
 function Button({text, ...restProps}: IButton) {

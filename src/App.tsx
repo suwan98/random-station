@@ -4,7 +4,7 @@ import Container from "./layout/Container";
 import {line1Stations} from "./api/stationData";
 
 function App() {
-  const [stationData, setStationData] = useState(line1Stations);
+  const [stationData] = useState(line1Stations);
 
   return (
     <>
