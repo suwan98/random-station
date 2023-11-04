@@ -5,18 +5,19 @@
 
 ## 🌠 프로젝트소개
 
-<br />
-
 <p align="center">
-    <img src="./src/assets/readmeImg/image.png" style="width:600px; height:600px;" />
+    <img src="./src/assets/readmeImg/image.png"  />
 </p>
-
-<br />
-<br />
 
 **버튼 클릭 시 호선별로 랜덤한 지하철역이 화면에 나타나는 토이프로젝트**
 
-👉 배포주소 바로가기 : [랜덤 지하철노선 생성기](https://random-station.vercel.app/)
+- 역과 역사이를 선택하고 클릭 시 해당 간격 내에서 랜덤한 지하철역명을 선택합니다!
+
+<br />
+
+## 🌠 배포 사이트
+
+👉 [랜덤 지하철노선 생성기](https://random-station.vercel.app/)
 
 ## 🔨 기술스택
 
