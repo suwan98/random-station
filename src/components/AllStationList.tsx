@@ -1,8 +1,9 @@
 import {TlineStation} from "../interface/TlineStation";
 import Button from "../common/Button";
 import getRandomIndex from "../utils/getRandomIndex";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
+import {gsap} from "gsap";
 
 interface IStationDataProps {
   stationData: TlineStation[];
@@ -12,6 +13,8 @@ function AllStationList({stationData}: IStationDataProps) {
   const [selectedStation, setSelectedStation] = useState<number[]>([]);
   const [filterdStaion, setFilterdStaion] = useState<TlineStation[]>([]);
   const [randomStation, setRandomStation] = useState<TlineStation | null>(null);
+  /* 버튼 클릭 애니메이션 구현 */
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
 
   /* 사용자가 2번 클릭 시 해당 역의 id값이 담긴 배열이 담기는 함수 */
   const handleSelectStation = (stationId: number) => () => {
@@ -85,10 +88,18 @@ function AllStationList({stationData}: IStationDataProps) {
       <p className="pt-4 font-GongGothicMedium text-lg text-pink-600 mobile:text-sm">
         랜덤으로 생성된역은 ?
       </p>
-      <p className="pt-4 font-GongGothicMedium text-lg mobile:text-sm">
-        {randomStation?.stationName}역
-      </p>
-      <Button text="랜덤 생성하기!" onClick={handleClickRandomStation} />
+      {!randomStation ? (
+        <p className="pt-4 font-prentenDard text-lg">어떤 역을 골라볼까?</p>
+      ) : (
+        <p className="pt-4 font-GongGothicMedium text-lg mobile:text-sm">
+          {randomStation?.stationName}역
+        </p>
+      )}
+      <Button
+        buttonRef={buttonRef}
+        text="랜덤 생성하기!"
+        onClick={handleClickRandomStation}
+      />
     </>
   );
 }

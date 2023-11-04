@@ -5,16 +5,22 @@
 
 ## 🌠 프로젝트소개
 
+<br />
+
+<p align="center">
+    <img src="./src/assets/readmeImg/image.png" style="width:600px; height:600px;" />
+</p>
+
+<br />
+<br />
+
 **버튼 클릭 시 호선별로 랜덤한 지하철역이 화면에 나타나는 토이프로젝트**
 
 👉 배포주소 바로가기 : [랜덤 지하철노선 생성기](https://random-station.vercel.app/)
 
-![Alt text](./src/assets/readmeImg/image.png)
-
-<br />
-<br />
-
 ## 🔨 기술스택
+
+<br />
 
 <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/tailwind-1572B6?style=for-the-badge&logo=tailwindcss&logoColor=white"> <img alt="TypeScript" src ="https://img.shields.io/badge/TypeScript-3178C6.svg?&style=for-the-badge&logo=TypeScript&logoColor=white"/> <img alt="Framer" src ="https://img.shields.io/badge/Framer-0055FF.svg?&style=for-the-badge&logo=Framer&logoColor=white"/> <img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&style=for-the-badge&logo=React&logoColor=white"/>
 
