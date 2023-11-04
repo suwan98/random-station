@@ -169,86 +169,142 @@ export const line1Stations = [
   },
   {
     id: 43,
-    stationName: "구일",
+    stationName: "가산디지털단지",
   },
   {
     id: 44,
-    stationName: "개봉",
+    stationName: "독산",
   },
   {
     id: 45,
-    stationName: "오류동",
+    stationName: "금천구청",
   },
   {
     id: 46,
-    stationName: "온수",
+    stationName: "석수",
   },
   {
     id: 47,
-    stationName: "역곡",
+    stationName: "관악",
   },
   {
     id: 48,
-    stationName: "소사",
+    stationName: "안양 ",
   },
   {
     id: 49,
-    stationName: "부천",
+    stationName: "명학",
   },
   {
     id: 50,
-    stationName: "중동",
+    stationName: "금정",
   },
   {
     id: 51,
-    stationName: "송내",
+    stationName: "군포",
   },
   {
     id: 52,
-    stationName: "부개",
+    stationName: "당정",
   },
   {
     id: 53,
-    stationName: "부평",
+    stationName: "의왕",
   },
   {
     id: 54,
-    stationName: "백운",
+    stationName: "성균관대",
   },
   {
     id: 55,
-    stationName: "동암",
+    stationName: "화서",
   },
   {
     id: 56,
-    stationName: "간석",
+    stationName: "수원",
   },
   {
     id: 57,
-    stationName: "주안",
+    stationName: "세류",
   },
   {
     id: 58,
-    stationName: "도화",
+    stationName: "병점",
   },
   {
     id: 59,
-    stationName: "제물포",
+    stationName: "세마",
   },
   {
     id: 60,
-    stationName: "도원",
+    stationName: "오산대",
   },
   {
     id: 61,
-    stationName: "동인천",
+    stationName: "오산",
   },
   {
     id: 62,
-    stationName: "인천",
+    stationName: "진위",
   },
   {
     id: 63,
+    stationName: "송탄",
+  },
+  {
+    id: 64,
+    stationName: "서정리",
+  },
+  {
+    id: 65,
+    stationName: "지제",
+  },
+  {
+    id: 66,
+    stationName: "평택",
+  },
+  {
+    id: 67,
+    stationName: "성환",
+  },
+  {
+    id: 68,
+    stationName: "직산",
+  },
+  {
+    id: 69,
+    stationName: "두정",
+  },
+  {
+    id: 70,
+    stationName: "천안",
+  },
+  {
+    id: 71,
+    stationName: "봉명",
+  },
+  {
+    id: 72,
+    stationName: "쌍용",
+  },
+  {
+    id: 73,
+    stationName: "아산",
+  },
+  {
+    id: 74,
+    stationName: "탕정",
+  },
+  {
+    id: 75,
+    stationName: "배방",
+  },
+  {
+    id: 76,
+    stationName: "온양온천",
+  },
+  {
+    id: 77,
     stationName: "신창",
   },
 ];

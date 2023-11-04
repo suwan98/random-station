@@ -50,23 +50,23 @@ function AllStationList({stationData}: IStationDataProps) {
 
   return (
     <>
-      <ul className="grid grid-cols-8  grid-rows-4 gap-8 py-12">
-        {stationData?.map((station: TlineStation) => {
+      <ul className="grid grid-cols-4  gap-4 my-8  w-fit px-6 mobile:text-sm grid-flow-dense">
+        {stationData?.map(({id, stationName}: TlineStation) => {
           return (
             <li
-              onClick={handleSelectStation(station.id)}
-              className={`cursor-pointer rounded-md border text-center p-2 font-prentenDard hover:bg-slate-700 hover:text-slate-200 ${
-                isBetweenSelectedStations(station.id)
+              onClick={handleSelectStation(id)}
+              className={`cursor-pointer rounded-md border text-center p-2 font-prentenDard hover:bg-slate-700 hover:text-slate-200 shadow-md place-content-center mobile:text-[12px] mobile:p-1  mobile:truncate ${
+                isBetweenSelectedStations(id)
                   ? "bg-slate-700 text-slate-200"
                   : null
               }`}
-              key={station.id}>
-              {station.stationName}역
+              key={id}>
+              {stationName}역
             </li>
           );
         })}
       </ul>
-      <p className="font-prentenDard text-xl">
+      <p className="font-prentenDard text-xl mobile:text-sm">
         {filterdStaion.length > 0 ? (
           <>
             {filterdStaion[0]?.stationName}역에서~
@@ -77,10 +77,10 @@ function AllStationList({stationData}: IStationDataProps) {
           "역을 선택해주세요."
         )}
       </p>
-      <p className="pt-4 font-GongGothicMedium text-lg text-pink-600">
+      <p className="pt-4 font-GongGothicMedium text-lg text-pink-600 mobile:text-sm">
         랜덤으로 생성된역은 ?
       </p>
-      <p className="pt-4 font-GongGothicMedium text-lg">
+      <p className="pt-4 font-GongGothicMedium text-lg mobile:text-sm">
         {randomStation?.stationName}역
       </p>
       <Button text="랜덤 생성하기!" onClick={handleClickRandomStation} />
