@@ -7,7 +7,7 @@ interface IContainer {
 function Container({children}: IContainer) {
   return (
     <>
-      <div className="flex my-12  w-full h-fit items-center justify-center flex-col">
+      <div className="flex my-12  w-full h-fit items-center justify-center flex-col p-12 mobile:p-6">
         {children}
       </div>
     </>

@@ -21,7 +21,7 @@ function StationItem({
             initial={{opacity: 0, y: -50}}
             animate={{opacity: 1, y: 0}}
             exit={{opacity: 0, y: 50}}
-            transition={{delay: index * 0.01}}
+            transition={{delay: index * 0.05}}
             onClick={handleSelectStation(id)}
             className={`cursor-pointer rounded-md border text-center p-2 font-prentenDard hover:bg-slate-700 hover:text-slate-200 shadow-md place-content-center mobile:text-[12px] mobile:p-1  mobile:truncate ${
               isBetweenSelectedStations(id)
