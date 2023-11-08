@@ -2,8 +2,8 @@ import {LegacyRef} from "react";
 
 interface IButton {
   text: string;
-  onClick: () => void;
-  buttonRef: LegacyRef<HTMLButtonElement>;
+  onClick?: () => void;
+  buttonRef?: LegacyRef<HTMLButtonElement>;
 }
 
 function Button({text, buttonRef, ...restProps}: IButton) {
