@@ -1,16 +1,18 @@
 import {useRecoilState} from "recoil";
 import {themeAtom} from "../states/recoil/themeAtom";
 import {FiMoon, FiSun} from "react-icons/fi";
-import {useEffect} from "react";
+import {useLayoutEffect} from "react";
 
 function ThemeToggleButton() {
   const [theme, setTheme] = useRecoilState(themeAtom);
   const handleToggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
   /* 새로고침시에도 테마 유지하기 */
-  useEffect(() => {
+  useLayoutEffect(() => {
     const localStorageTheme = localStorage.getItem("theme");
     if (localStorageTheme) {
       setTheme(localStorageTheme);
