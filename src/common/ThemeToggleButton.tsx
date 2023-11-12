@@ -10,10 +10,12 @@ function ThemeToggleButton() {
   };
 
   /* 새로고침시에도 테마 유지하기 */
-
   useEffect(() => {
-    window.localStorage.setItem("theme", theme);
-  }, [theme]);
+    const localStorageTheme = localStorage.getItem("theme");
+    if (localStorageTheme) {
+      setTheme(localStorageTheme);
+    }
+  }, [setTheme]);
 
   return (
     <button
